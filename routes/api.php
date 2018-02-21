@@ -17,8 +17,8 @@ use Illuminate\Http\Request;
 //    return $request->user();
 //});
 
-Route::group(['middleware'=>'cors'], function () {
+
     Route::post('/contato','Api\ClienteController@enviarEmail');
-});
+
 
 
