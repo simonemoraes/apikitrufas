@@ -15,4 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Route::post('/contato', 'Api\ClienteController@enviarEmail');
+
+Route::post('/contato', 'Api\ClienteController@enviarEmail');
