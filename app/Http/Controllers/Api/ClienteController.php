@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Mail\ClienteEmail;
-use App\model\Cliente;
+use App\model\cliente;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
@@ -15,7 +15,7 @@ class ClienteController extends Controller
 
         $cliente = $request->all();
 
-        $result = Cliente::create($cliente);
+        $result = \App\model\cliente::create($cliente);
 
         // Enviar o primeiro email
         Mail::to('contato@kitrufas.com.br')->send(new ClienteEmail('CLIENTE',$result));
