@@ -34,12 +34,9 @@ class ClienteEmail extends Mailable
     {
         if($this->tipo === 'CLIENTE'){
 
-            return $this->from($this->dados['email'], $this->dados['nome'])
+            $this->from($this->dados['email'], $this->dados['nome'])
                 ->subject("Cadastro de Cliente")
                 ->view('emailCliente',compact('dados',$this->dados));
-
         }
-
-        return null;
     }
 }

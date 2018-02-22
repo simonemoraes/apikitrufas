@@ -16,4 +16,4 @@ Route::get('/', function () {
 });
 
 
-Route::post('/contato', 'Api\ClienteController@enviarEmail');
+//Route::post('/contato', 'Api\ClienteController@enviarEmail');
